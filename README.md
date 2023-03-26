@@ -6,4 +6,4 @@
 
 |osint|reverse engeneering|
 |---|---|
-|[легенд нужно знать](/may_ctf/may_ctf)|[кк](/may_ctf/may_ctf/src/branch/main/tasks/kk)|
+|[Легенд нужно знать!](/may_ctf/may_ctf/src/branch/main/tasks/Легенд нужно знать!)|[кк](/may_ctf/may_ctf/src/branch/main/tasks/kk)|
