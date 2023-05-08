@@ -1,6 +1,6 @@
 #комментарии по развертыванию сервера для таска Отсылка на ДжоДжо 1 у себя:
 
-Если к вас не установлен docker, установите: (https://selectel.ru/blog/docker-install-ubuntu/)[на linux]; [на windows](https://learn.microsoft.com/ru-ru/virtualization/windowscontainers/manage-docker/configure-docker-daemon)
+Если к вас не установлен docker, установите: [на linux](https://selectel.ru/blog/docker-install-ubuntu/); [на windows](https://learn.microsoft.com/ru-ru/virtualization/windowscontainers/manage-docker/configure-docker-daemon)
 Распакуйте jojo1.zip в отдельную папку, откройте в ней терминал и напишите:
 ```
 docker build . -t jojo_reference
