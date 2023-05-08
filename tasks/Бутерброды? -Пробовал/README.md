@@ -18,4 +18,4 @@
 
 Сдаем уникальную часть ссылки как флаг!
 
-Ответ: ctf{ButerbrodEqualsPower}
+Ответ: `ctf{ButerbrodEqualsPower}`
