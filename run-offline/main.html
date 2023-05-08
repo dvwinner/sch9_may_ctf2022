@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+ws=new WebSocket('ws://localhost:8002')
+
+ws.onopen=function(e){
+	ws.send('init');
+}
+
+ws.onmessage=function(e) {
+	console.log('recieved:',e.data);
+	phrase=e.data;
+	if(phrase.substr(0,7)=="JoJo hp") {
+		njjhp=Number(phrase.substr(9,1));
+		nadhp=Number(phrase.substr(phrase.indexOf('ad hp:')+7,phrase.length));
+		jjw=(20*njjhp/4).toString();
+		adw=(20*nadhp/1000).toString();
+		jjhp.style.width=jjw+'vw';
+		adhp.style.width=adw+'vw';
+		return;
+	}
+	msg=document.createElement('div');
+	inner=document.createElement('div');
+	inner.style="text-align:left;margin-top:2px;background-color:#f77;width:50vw;float:left";
+	if(phrase.substr(0,5)=="photo") {
+		img=document.createElement('img');
+		img.src=phrase.substr(6,7)+'.png';
+		img.style='width:30vw;'
+		inner.appendChild(img);
+	} else {
+		if(phrase.substr(0,2)=="js") {
+			phrase=phrase.substr(3,phrase.length)
+			inner.style="margin-top:2px;background-color:#77f;width:50vw;float:right";
+		}
+		inner.appendChild(document.createTextNode(phrase));
+	}
+	msg.appendChild(inner);
+	dg.appendChild(msg);
+	inner.scrollIntoView();
+}
+
+
+</script>
+<body>
+<div style='width:60vw;height:3vh;margin:auto;vertical-align:middle;margin-top:1vh' id='hpc'>
+<div style='width:20vw;background-color:#f5f;height:3vh;float:left'>
+<div style='width:20vw;background-color:#5f5;height:3vh' id='adhp'>
+</div>
+</div>
+<div style='width:20vw;background-color:#f5f;height:3vh;float:right'>
+<div style='width:20vw;background-color:#5f5;height:3vh;float:right' id='jjhp'>
+</div>
+</div>
+</div>
+</div>
+<div style='width:60vw;height:85vh;overflow-y:scroll;background-color:#aaa;margin:auto;vertical-align:middle;margin-top:1vh' id='dg'>
+</div>
+<div style='width:60vw;height:5vh;background-color:#ccc;margin:auto;vertical-align:middle;margin-top:0px'>
+Твоя следующая фраза:
+<form style='display:inline-block' id='guess-form'>
+<input type='text' name='phrase' id='phrase-text'>
+<input type='submit' value='Я угадаю фразу!'>
+</form>
+</div>
+<script>
+form = document.getElementById('guess-form');
+dg=document.getElementById('dg');
+jjhp=document.getElementById('jjhp');
+adhp=document.getElementById('adhp');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log(e.data);
+    phrase=document.getElementById('phrase-text').value;
+    console.log(phrase);
+    ws.send(phrase);
+    phrase='Твоя следующая фраза:'+phrase;
+    msg=document.createElement('div');
+    inner=document.createElement('div');
+    inner.style="text-align:left;margin-top:2px;background-color:#77f;width:50vw;float:right";
+    inner.appendChild(document.createTextNode(phrase));
+    msg.appendChild(inner);
+    dg.appendChild(msg);
+    inner.scrollIntoView();
+});
+</script>
+</body>
+</html>
