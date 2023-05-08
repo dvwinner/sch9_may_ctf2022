@@ -1,4 +1,4 @@
-#комментарии по развертыванию сервера для таска Отсылка на ДжоДжо 1 у себя:
+# комментарии по развертыванию сервера для таска Отсылка на ДжоДжо 1 у себя:
 
 Если к вас не установлен docker, установите: [на linux](https://selectel.ru/blog/docker-install-ubuntu/); [на windows](https://learn.microsoft.com/ru-ru/virtualization/windowscontainers/manage-docker/configure-docker-daemon)
 
