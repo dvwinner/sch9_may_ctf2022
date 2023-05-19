@@ -5,7 +5,7 @@
 
 ## Таски:
 
-[Hi Herbert](tasks/Hi Herbert/) (blx000, forensic 300)  
+[Hi Herbert](tasks/Hi%20Herbert/) (blx000, forensic 300)  
 
 <!-- 
 |osint|reverse|forensic|crypto|
