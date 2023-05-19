@@ -6,6 +6,13 @@
 ## Таски:
 
 [Hi Herbert](tasks/Hi%20Herbert/) (blx000, forensic 300)  
+[Отсылка На ДжоДжо 1](tasks/jojo1/) (dragonmuffin, reverse(ppc) 700)
+[KK](tasks/kk/) (dragonmuffin, reverse 400)
+[Бутерброды? -Пробовал](tasks/Бутерброды%3F%20-Пробовал/) (dvwinner, osint 125)  
+[Жизнь Общажная...](tasks/Жизнь%20Общажная.../) (dvwinner, osint 175)  
+[Анонимность Наше Всё!](tasks/Анонимность%20Наше%20Всё%21/) (dvwinner, osint 300)  
+[Белое Пространство](tasks/Белое%20Пространство/) (j043r, crypto 300)  
+[Зипка Для Друга](tasks/Зипка%20Для%20Друга/) (j043r, stego 200)  
 
 <!-- 
 |osint|reverse|forensic|crypto|
