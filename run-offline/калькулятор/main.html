@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+var message='2*2';
+function init() {
+	ws=new WebSocket('wss://calculator.ctfmay.sch9.ru/ws/')
+	ws.onopen=function(e){
+		ws.send(message);
+	}
+	ws.onmessage=function(e) {
+		console.log('recieved:',e.data);
+		phrase=e.data;
+		inner=document.createElement('div');
+		inner.style="text-align:left;margin-top:2px;background-color:#f77;width:50vw;float:left";
+		inner.appendChild(document.createTextNode(phrase));
+		dg.appendChild(inner);
+		inner.scrollIntoView();
+	}
+}
+
+</script>
+</head>
+<body>
+<div style='width:60vw;height:55vh;overflow-y:scroll;background-color:#aaa;margin:auto;vertical-align:middle;margin-top:1vh' id='dg'>
+</div>
+<div style='width:60vw;height:35vh;background-color:#ccc;margin:auto;vertical-align:middle;margin-top:0px'>
+<form style='display:inline-block' id='calc-form'>
+<input type='text' name='phrase' id='calc-text' readonly>
+<input type='submit' value='calculate!!!'>
+</form>
+<div id='buttons'>
+</div>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("1")'>1</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("2")'>2</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("3")'>3</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("+")'>+</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("-")'>-</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("4")'>4</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("5")'>5</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("6")'>6</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("*")'>*</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("/")'>/</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("7")'>7</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("8")'>8</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("9")'>9</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("0")'>0</button>
+	<button style='height:10vh;width:12vw;float:left' onclick = 'ar_but("C")'>C</button>
+</div>
+<script>
+form = document.getElementById('calc-form');
+dg=document.getElementById('dg');
+jjhp=document.getElementById('jjhp');
+adhp=document.getElementById('adhp');
+	function ar_but(e) {
+			console.log(e);
+			document.getElementById('calc-text').value+=e;
+			if(e=='C') {
+				document.getElementById('calc-text').value='';
+			}
+	}
+form.onsubmit=function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    message=document.getElementById('calc-text').value;
+    init()
+    inner=document.createElement('div');
+    inner.style="text-align:left;margin-top:2px;background-color:#77f;width:50vw;float:right";
+    inner.appendChild(document.createTextNode(message));
+    dg.appendChild(inner);
+    inner.scrollIntoView();
+}
+</script>
+</body>
+</html>
