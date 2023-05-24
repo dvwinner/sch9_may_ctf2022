@@ -18,4 +18,5 @@
 [Легенд нужно знать!](tasks/Легенд%20нужно%20знать%21/) (blx000, osint 200)   
 [Странное поведение!](tasks/Странное%20поведение/) (blx000, crypto 150)    
 [Модная причёска](tasks/Модная%20причёска/) (blx000, crypto 200)    
-[Treasure hunt](tasks/Treasure%20hunt/) (blx000, crypto 150)
+[Treasure hunt](tasks/Treasure%20hunt/) (blx000, crypto 150)    
+[Инопланетяне?!?](tasks/Инопланетяне%3F%21%3F/) (blx000, misc 250)
