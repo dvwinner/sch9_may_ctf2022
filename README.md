@@ -21,3 +21,4 @@
 [Treasure hunt](tasks/Treasure%20hunt/) (blx000, crypto 150)    
 [Инопланетяне?!?](tasks/Инопланетяне%3F%21%3F/) (blx000, misc 250)  
 [В темноте](tasks/В%20темноте/) (blx000, crypto 100)
+[Тест на Позера](tasks/Тест%20на%20Позера/) (dvwinner, web 400)
