@@ -1,0 +1,2 @@
+Разархивируйте PozerTest.zip в удобное место. И запустите main.html через ваш браузер. 
+Файл originalChecker.txt содержит код с оригинальным кодом javascript. roflChecker.js - тот же файл но после `Obfuscation` (погуглите)
